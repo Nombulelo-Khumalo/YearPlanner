@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaPen, FaTrash } from 'react-icons/fa';
 
-function Input({ onSubmit }) {
+function Information({ onSubmit }) {
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
@@ -120,4 +120,4 @@ function Input({ onSubmit }) {
   );
 }
 
-export default Input;
+export default Information;
