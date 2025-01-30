@@ -28,7 +28,7 @@ function Information({ onSubmit }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [editableFields, setEditableFields] = useState(
     Object.keys(formData).reduce((acc, key) => {
-      acc[key] = false; // Initially, all fields are locked
+      acc[key] = false; 
       return acc;
     }, {})
   );
@@ -44,9 +44,9 @@ function Information({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(formData);
-    setIsSubmitted(true); // Mark the form as submitted
+    setIsSubmitted(true); 
     setEditableFields(Object.keys(formData).reduce((acc, key) => {
-      acc[key] = false; // After submit, set all fields to read-only
+      acc[key] = false; 
       return acc;
     }, {}));
   };
@@ -54,26 +54,26 @@ function Information({ onSubmit }) {
   const handleEditClick = (field) => {
     setEditableFields((prev) => ({
       ...prev,
-      [field]: true, // Enable editing for that specific field
+      [field]: true, 
     }));
   };
 
   const handleClearClick = (field) => {
     setFormData((prevData) => ({
       ...prevData,
-      [field]: '', // Clear the field
+      [field]: '',
     }));
     setEditableFields((prev) => ({
       ...prev,
-      [field]: false, // Make it read-only again
+      [field]: false, 
     }));
   };
 
   const formatLabel = (str) => {
     return str
-      .replace(/([a-z])([A-Z])/g, '$1 $2') // Adds space between camelCase words
-      .toLowerCase()                      // Convert all to lowercase first
-      .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize the first letter of each word
+      .replace(/([a-z])([A-Z])/g, '$1 $2') 
+      .toLowerCase()                      
+      .replace(/\b\w/g, (char) => char.toUpperCase()); 
   };
 
   return (
@@ -91,10 +91,10 @@ function Information({ onSubmit }) {
                 id={field}
                 value={formData[field]}
                 onChange={handleChange}
-                readOnly={isSubmitted && !editableFields[field]} // Fields are read-only if submitted and not editable
+                readOnly={isSubmitted && !editableFields[field]} 
                 className="w-full p-2 border border-gray-300 rounded mt-1"
               />
-              {isSubmitted && !editableFields[field] && (  // Show pen and trash icons only if submitted and field is locked
+              {isSubmitted && !editableFields[field] && (  
                 <div className="flex ml-2">
                   <FaPen
                     onClick={() => handleEditClick(field)} 
