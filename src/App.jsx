@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path='/menu' element={<Menu/>}/>
          </Routes>
         </div>
+        <Navbar/>
       </div>
     </Router>
   )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Import menu icons
+import { FaBars, FaTimes } from 'react-icons/fa'; 
 
 const Menu = () => {
   const [toggle, setToggle] = useState(false); 
@@ -18,7 +18,7 @@ const Menu = () => {
     <nav className="w-full flex justify-between items-center bg-gray-800 p-3 shadow-md">
       <a href="#home">
         <div className="w-[80px] h-[80px] text-white flex items-center justify-center">
-          <span className="font-poppins text-2xl font-bold ml-10">VisionBoard</span> {/* Custom Logo */}
+          <span className="font-poppins text-2xl font-bold ml-10">VisionBoard</span> 
         </div>
       </a>
      
@@ -28,7 +28,7 @@ const Menu = () => {
             key={nav.path}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
               index === navItems.length - 1 ? 'mr-0' : 'mr-10'
-            } text-white hover:text-purple-900 duration-200 ease-out`}
+            } text-white hover:text-blue-900 duration-200 ease-out`}
           >
             <Link to={nav.path}>{nav.name}</Link>
           </li>
