@@ -28,8 +28,8 @@ const Navbar = () => {
       {/* Navbar for Large Screens */}
       <nav className="fixed bottom-0 right-0 transform -translate-y-1/2 hidden lg:flex lg:flex-col items-center list-none space-y-10 bg-gray-800 p-4 rounded-l-xl">
         {navItems.map((nav, index) => (
-          <li key={index} className="text-white text-2xl">
-            <Link to={nav.path} className="flex items-center justify-center">
+          <li key={index} className="text-white text-2xl ">
+            <Link to={nav.path} className="flex items-center justify-center ">
               {nav.icon}
             </Link>
           </li>

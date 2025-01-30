@@ -6,7 +6,7 @@ const Menu = () => {
   const [toggle, setToggle] = useState(false); 
 
   const navItems = [
-    { name: 'Mentor', path: '/mentor' },
+    { name: 'Connections', path: '/connections' },
     { name: 'Analysis', path: '/analysis' },
     { name: 'AI Mentor', path: '/ai' },
     { name: 'Journal', path: '/journal' },

@@ -8,6 +8,7 @@ import AI from "./components/FetchInput/AI";
 import Analysis from "./components/FetchInput/Analysis";
 import Board from "./components/FetchInput/Board";
 import Home from "./components/FetchInput/Home";
+import Networking from "./components/UserInput/Networking";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/analysis" element={<Analysis/>}/>
           <Route path="/board" element={<Board/>}/>
           <Route path="/" element={<Home/>}/>
+          <Route path="/connections" element={<Networking/>}/>
          </Routes>
         </div>
         <Navbar/>
