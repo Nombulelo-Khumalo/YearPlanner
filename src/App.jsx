@@ -1,6 +1,9 @@
 import React from "react"
 import { useState } from "react";
-import Information from "./components/Information"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Menu from "./components/Menu";
+
+
 function App() {
 
   const [userData, setUserData] = useState({
@@ -27,14 +30,21 @@ function App() {
   });
   
 
-  const handleSubmit = (data) => {
-    setUserData(data);
-  };
+  // const handleSubmit = (data) => {
+  //    setUserData(data);
+  //  };
 
   return (
-    <>
-      <Information onSubmit={handleSubmit}/>
-    </>
+     <Router>
+      <div>
+        <Menu/>
+        <div>
+         <Routes>
+          <Route path='/menu' element={<Menu/>}/>
+         </Routes>
+        </div>
+      </div>
+    </Router>
   )
 }
 
